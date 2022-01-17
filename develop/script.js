@@ -37,7 +37,10 @@ function generatePassword() {
     passWordSelection.unshift (1,2,3,4,5,6,7,8,9,0);
   }
 
-    
+  for (let i = 0; i<=passWordLength-1; i++ ) {
+    passWord  += passWordSelection[Math.floor(Math.random() * passWordSelection.length)];
+  }
+    return passWord;
 }
 
 // Write password to the #password input
